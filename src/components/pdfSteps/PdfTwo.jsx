@@ -1,21 +1,48 @@
-import { PDFViewer } from '@react-pdf/renderer';
 import PdfBase from './PdfBase';
-import { Text, View } from '@react-pdf/renderer';
+import { PDFViewer, Text, View } from '@react-pdf/renderer';
 import styles from './styles/PdfTwoStyles';
-import { getWrittenDate, getYear } from '../../utils/Dates';
+import { getWrittenDateFromInput, getWrittenDate, getYear } from '../../utils/Dates';
 
 const Pdfone = () => {
     const anio = getYear();
+    const applicationDate = getWrittenDateFromInput("2024-12-01 22:06:49");
     const actualData = getWrittenDate();
-
-    const reservation = {
+    const projectApproval = {
         anio: anio,
         actualData: actualData,
+        applicationDate: applicationDate,
         id: 123,
         title: 'Análisis de Algoritmos en Redes Neuronales',
         projectSimilarity: 18,
+        engineeringFaculty: {
+            dni: 123456789,
+            firstName: "Joel",
+            middleName: "Jose",
+            lastName: "Huacan",
+            carrer: {
+                name: "Ingeniería de Sistemas",
+            }
+        },
+        asesor: {
+            dni: 123456784,
+            firstName: "Juan",
+            middleName: "Anyel",
+            lastName: "Paztos",
+            carrer: {
+                name: "Ingeniería de Sistemas",
+            }
+        },
+        coAsesor: {
+            dni: 123456754,
+            firstName: "Jerick",
+            middleName: "Johan",
+            lastName: "Patiño",
+            carrer: {
+                name: "Ingeniería de Sistemas",
+            }
+        },
         student: {
-            firstNames: 'Juan Carlos',
+            firstName: 'Juan Carlos',
             lastName: 'Perez Gomez',
             dni: '12345678',
             studentCode: '2024001',
@@ -31,7 +58,7 @@ const Pdfone = () => {
 
             <PdfBase commemorativeText={false}>
                 <Text style={styles.h1}>
-                    INFORME Nº {reservation.id}-{anio}-D. UIFI-UNAMBA
+                    INFORME Nº {projectApproval.id}-{anio}-D. UIFI-UNAMBA
                 </Text>
                 <View style={styles.table}>
                     {/* Row 1 */}
@@ -39,7 +66,7 @@ const Pdfone = () => {
                         <Text style={styles.tableColHeader}>A</Text>
                         <View style={styles.tableCol}>
                             <Text>
-                                <Text style={styles.bold}>:</Text> Dr. Franklin Aguirre Huillcas
+                                <Text style={styles.bold}>:</Text> Dr. {`${projectApproval.engineeringFaculty.firstName} ${projectApproval.engineeringFaculty.middleName} ${projectApproval.engineeringFaculty.lastName}`}
                             </Text>
                             <Text>Decano de la Facultad de Ingeniería – UNAMBA</Text>
                         </View>
@@ -62,7 +89,7 @@ const Pdfone = () => {
                         <View style={styles.tableCol}>
                             <Text>
                                 <Text style={styles.bold}>:</Text> SOLICITUD de
-                                <Text> fecha 23 de febrero de 2024</Text>
+                                <Text>{projectApproval.applicationDate}</Text>
                                 <Text style={styles.bold}>                                            Reg. N° 080</Text>
                             </Text>
                             <Text>Anexo 4 (Docente Asesor)</Text>
@@ -74,8 +101,8 @@ const Pdfone = () => {
                         <Text style={styles.tableColHeader}>FECHA</Text>
                         <View style={styles.tableCol}>
                             <Text>
-                                <Text style={styles.bold}>:</Text>{' '}
-                                <Text>26 de febrero del 2024</Text>
+                                <Text style={styles.bold}>:</Text>
+                                <Text> {projectApproval.actualData}</Text>
                             </Text>
                         </View>
                     </View>
@@ -83,21 +110,62 @@ const Pdfone = () => {
                 </View>
                 <View style={styles.section}>
                     <Text>
-                        Por intermedio del presente, me dirijo a usted, para informarle que,{' '}
-                        <Text style={[styles.bold, styles.redText]}>Hidania Grimaldina</Text>{' '}
-                        OSCCO SOTO identificada con DNI N° <Text style={styles.bold}>47660661</Text> y con código de matrícula N°{' '}
-                        <Text style={styles.bold}>112153</Text> Bachiller de la{' '}
-                        <Text style={styles.bold}>E.A.P. de Ingeniería Informática</Text> y Sistemas de la Facultad de Ingeniería, ha presentado el proyecto de tesis titulada:{' '}
-                        <Text style={[styles.bold, styles.underline]}>
-                            “Automatización de riego tecnificado por goteo, con el desarrollo e implementación de un software con tecnología Arduino, 2021”
+                        Por intermedio del presente, me dirijo a usted, para informarle que,
+                        <Text style={[styles.bold, styles.redText]}> {`${projectApproval.student.firstName} ${projectApproval.student.middleName}`}</Text>
+                        {projectApproval.student.firstName} identificada con DNI N° <Text style={styles.bold}>{projectApproval.student.dni}</Text> y con código de matrícula N°
+                        <Text style={styles.bold}> {projectApproval.student.studentCode}</Text> Bachiller de la
+                        <Text style={styles.bold}> E.A.P. de {projectApproval.student.career.name}</Text> y Sistemas de la Facultad de Ingeniería, ha presentado el proyecto de tesis titulada:{' '}
+                        <Text style={styles.bold}>
+                            {projectApproval.title}
                         </Text>
-                        ; cuyo asesor es el <Text style={styles.bold}>Mg. Marleny Peralta Ascue</Text>; Co Asesor{' '}
-                        <Text style={[styles.bold, styles.blueText]}>Yhon Fuentes Huaman</Text>, en cumplimiento con los requisitos exigidos para la{' '}
-                        <Text style={styles.bold}>aprobación del proyecto de tesis</Text> según reglamento de investigación UNAMBA (Artículos{' '}
-                        <Text style={styles.bold}>5, 7, 17, 24 y 27</Text>), adjunto los antecedentes que detallo a continuación:
+                        ; cuyo asesor es el <Text style={styles.bold}>{`${projectApproval.asesor.firstName} ${projectApproval.asesor.middleName} ${projectApproval.asesor.lastName}`} y</Text>; Co Asesor
+                        <Text style={[styles.bold, styles.blueText]}> {`${projectApproval.asesor.firstName} ${projectApproval.coAsesor.middleName} ${projectApproval.coAsesor.lastName}`}</Text>, en cumplimiento con los requisitos exigidos para la
+                        <Text style={styles.bold}> aprobación del proyecto de tesis</Text> según reglamento de investigación UNAMBA (Artículos
+                        <Text style={styles.bold}> 5, 7, 17, 24 y 27</Text>), adjunto los antecedentes que detallo a continuación:
                     </Text>
                 </View>
+                <View style={styles.ul}>
+                    <Text style={styles.ulLi}>
+                        1.	Solicitud de aprobación de proyecto de tesis
+                    </Text>
+                    <Text style={styles.ulLi}>
+                        2.	Anexo 4 (Informe de asesoría según reglamento de investigación)
+                    </Text>
+                    <Text style={styles.ulLi}>
+                        3.	Constancia de filtro de similitud y reporte de Software COMPILATIO magister
+                    </Text>
+                    <Text style={styles.ulLi}>
+                        4.	Ejemplar de proyecto de tesis en físico.
+                    </Text>
+                    <Text style={styles.ulLi}>
+                        5.	Constancias de haber aprobado Metodología de investigación.
+                    </Text>
+                    <Text style={styles.ulLi}>
+                        6.	Pagos de S/.20.00 por concepto de revisión y aprobación de proyecto de tesis
+                    </Text>
+                    <Text style={styles.ulLi}>
+                        7.	CTI Vitae de CONCYTEC de Asesor.
+                    </Text>
+                </View>
+                <View style={styles.section}>
+                    <Text>
+                        En concordancia a los artículos 17, 24 y 27 del Reglamento de Investigación UNAMBA vigente, la Dirección
+                        de la Unidad de Investigación de la Facultad de Ingeniería
+                        <Text style={[styles.bold, styles.underline]}>
+                            cumple con elevar el presente informe para la
+                            formalización y aprobación del presente proyecto de tesis mediante acto resolutivo.
+                        </Text>
+                        Indicando que el
+                        interesado a partir de la aprobación del proyecto, tiene un plazo máximo de un año para la ejecución
+                        del proyecto de tesis, pudiendo ampliarse por seis meses, previa justificación del Asesor.
 
+                    </Text>
+                </View>
+                <View style={styles.section}>
+                    <Text>
+                        Es todo cuanto tengo que informarle para su conocimiento y fines pertinentes.
+                    </Text>
+                </View>
             </PdfBase>
         </PDFViewer>
     );

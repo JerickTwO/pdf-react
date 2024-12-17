@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
     },
     ulLi: {
-        fontSize: 12,
+        fontSize: 11,
         marginBottom: 5,
     },
     // Table Styles

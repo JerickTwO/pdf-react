@@ -36,6 +36,11 @@ const styles = StyleSheet.create({
 
     footerText: {
         fontSize: 8,
+        position: 'absolute',
+        bottom: -240,
+        paddingHorizontal: 40,
+        left: 0,
+        right: 0,
         fontWeight: 'bold'
 
     },

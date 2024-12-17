@@ -1,6 +1,5 @@
-import { PDFViewer } from '@react-pdf/renderer';
 import PdfBase from './PdfBase';
-import { Text, View } from '@react-pdf/renderer';
+import { PDFViewer, Text, View } from '@react-pdf/renderer';
 import styles from './styles/PdfTwoStyles';
 import { getWrittenDate, getYear } from '../../utils/Dates';
 
