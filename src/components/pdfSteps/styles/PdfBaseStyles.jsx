@@ -1,13 +1,8 @@
 import { StyleSheet, Font } from '@react-pdf/renderer';
 
 // REGISTRO DE FUENTES
-Font.register({
-    family: 'Roboto',
-    fonts: [
-        { src: 'https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc9.ttf', fontWeight: 'normal' }, // Normal
-        { src: 'https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4EsA.ttf', fontWeight: 'bold' }, // Bold
-    ],
-});
+Font.register({ family: 'Roboto', src: './fonts/times new rioman', fontStyle: 'normal', fontWeight: 'bold' });
+
 const styles = StyleSheet.create({
     page: {
         fontSize: 10,

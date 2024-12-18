@@ -1,10 +1,8 @@
-import PdfTwo from './components/pdfSteps/PdfTwo';
+import PdfFour from './components/pdfSteps/PdfFour';
 
 const App = () => {
     return (
-        <>
-            <PdfTwo />
-        </>
+        <PdfFour />
     );
 };
 

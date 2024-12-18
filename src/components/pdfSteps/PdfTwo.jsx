@@ -3,7 +3,7 @@ import { PDFViewer, Text, View } from '@react-pdf/renderer';
 import styles from './styles/PdfTwoStyles';
 import { getWrittenDateFromInput, getWrittenDate, getYear } from '../../utils/Dates';
 
-const Pdfone = () => {
+const PdfTwo = () => {
     const anio = getYear();
     const applicationDate = getWrittenDateFromInput("2024-12-01 22:06:49");
     const actualData = getWrittenDate();
@@ -42,8 +42,9 @@ const Pdfone = () => {
             }
         },
         student: {
-            firstName: 'Juan Carlos',
-            lastName: 'Perez Gomez',
+            firstName: 'Juan',
+            middleName: 'Alberto',
+            lastName: 'Carlos',
             dni: '12345678',
             studentCode: '2024001',
             career: {
@@ -111,8 +112,8 @@ const Pdfone = () => {
                 <View style={styles.section}>
                     <Text>
                         Por intermedio del presente, me dirijo a usted, para informarle que,
-                        <Text style={[styles.bold, styles.redText]}> {`${projectApproval.student.firstName} ${projectApproval.student.middleName}`}</Text>
-                        {projectApproval.student.firstName} identificada con DNI N° <Text style={styles.bold}>{projectApproval.student.dni}</Text> y con código de matrícula N°
+                        <Text style={[styles.bold, styles.redText]}> {`${projectApproval.student.firstName} ${projectApproval.student.middleName} `}</Text>
+                        {projectApproval.student.lastName} identificada con DNI N° <Text style={styles.bold}>{projectApproval.student.dni}</Text> y con código de matrícula N°
                         <Text style={styles.bold}> {projectApproval.student.studentCode}</Text> Bachiller de la
                         <Text style={styles.bold}> E.A.P. de {projectApproval.student.career.name}</Text> y Sistemas de la Facultad de Ingeniería, ha presentado el proyecto de tesis titulada:{' '}
                         <Text style={styles.bold}>
@@ -171,4 +172,4 @@ const Pdfone = () => {
     );
 };
 
-export default Pdfone;
+export default PdfTwo;
