@@ -1,7 +1,7 @@
 
 import PdfBase from './PdfBase';
 import { PDFViewer, Text, View } from '@react-pdf/renderer';
-import styles from './styles/PdfThreeStyles';
+import styles from './styles/PdfFourStyles';
 import { getFullWrittenDateTimeFromInput, getWrittenDate, getYear } from '../../utils/Dates';
 
 const PdfThree = () => {
@@ -58,75 +58,67 @@ const PdfThree = () => {
 
         <PDFViewer style={{ width: '100vw', height: '100vh' }}>
 
-            <PdfBase commemorativeText={false}>
-                <Text style={styles.h1}>
-                    ACTA DE DESIGNACIÓN DE JURADOS DE TESIS
-                </Text>
+            <PdfBase showCommemorativeText={true} commemorativeText={`“Año del Bicentenario, de la consolidación de nuestra Independencia, y de la conmemoración 
+de las Heroicas de Junín y Ayacucho”
+`}>
+
+                {/* Fecha y número de carta */}
+                <View style={styles.section}>
+                    <Text style={styles.text}>
+                        Tamburco, <Text style={styles.bold}>25 de enero del 2024</Text>
+                    </Text>
+                    <Text style={styles.text}>
+                        CARTA MÚLTIPLE N° <Text style={styles.bold}>001-2024-DI-FI-UNAMBA</Text>
+                    </Text>
+                </View>
+
+                {/* Dirigido a */}
+                <View style={styles.section}>
+                    <Text style={styles.bold}>
+                        SEÑORES: Jurados Evaluadores de Tesis de la EAP. Ingeniería de Minas
+                    </Text>
+                    <Text>Dr. Edwar Ilasaca Cahuata - Presidente</Text>
+                    <Text>Dr. Edgar Zenón Vilca Mansilla - Primer Miembro</Text>
+                    <Text>Mtro. Diómedes N. Ferral Sarmiento - Segundo Miembro</Text>
+                </View>
+
+                {/* Asunto */}
                 <View style={styles.section}>
                     <Text>
-                        En fecha 12 de setiembre del año dos mil veinticuatro, siendo las 12:00 horas reunidas de manera presencial, el director de la Unidad de Investigación de la Facultad de Ingeniería
-                        <Text style={styles.bold}> Dr. Lintol Contreras Salas</Text>
-                        , y miembros de la Comisión de Investigación de la<Text style={styles.bold}> Escuela Académico Profesional de Ingeniería Civil</Text> conformado por el Mgt.  Calixto Cañari Otero y demás miembros de la comisión y en atención a la solicitud s/n presentado por el
-                        <Text style={styles.bold}> Bachiller JULIO INCA GÓMEZ</Text>, de fecha 11 de setiembre del 2024 peticionando la designación de jurados para revisión del informe final de tesis denominado
-                        <Text style={styles.bold}>: “Optimización del tiempo y costo en la formulación de proyectos de riego utilizando Delphin Express en la ORFEI, Apurímac - 2024",</Text>aprobado mediante
-                        <Text style={styles.bold}>
-                            RESOLUCIÓN DECANAL N° 221-2024-DFI-UNAMBA
-                        </Text>
-                        , Se procede a realizar la designación de jurados e incorporación de Asesor de acuerdo<Text style={styles.bold}>al CAPÍTULO VII: DEL INFORME Y LA DESIGNACIÓN DE JURADOS   (Art.46) del Reglamento de Investigación</Text>
-                        aprobado bajo<Text style={styles.bold}> RESOLUCIÓN N° 168-2024(2) – CU-UNAMBA</Text>, quedando el jurado evaluador de la siguiente manera:
+                        ASUNTO: Remito Informe de Tesis del Bach.{' '}
+                        <Text style={styles.bold}>Diofanto Honorato CONTRERAS PACORBO</Text>, para su PRIMERA revisión.
                     </Text>
                 </View>
-                <View style={styles.table}>
-                    {/* Row 1 */}
-                    <View style={styles.tableRow}>
-                        <Text style={styles.tableColHeader}>Mg. Diomedes Napoleón Ferrel Sarmiento</Text>
-                        <View style={styles.tableCol}>
-                            <Text>
-                                <Text style={styles.bold}>Presidente</Text>
-                            </Text>
-                        </View>
-                    </View>
 
-                    {/* Row 2 */}
-                    <View style={styles.tableRow}>
-                        <Text style={styles.tableColHeader}>Ing. Milson Moran Moreano</Text>
-                        <View style={styles.tableCol}>
-                            <Text>Primer Miembro</Text>
-                        </View>
-                    </View>
-
-                    {/* Row 3 */}
-                    <View style={styles.tableRow}>
-                        <Text style={styles.tableColHeader}>Mgt. Rómulo Gómez Noblega</Text>
-                        <View style={styles.tableCol}>
-                            <Text>Segundo Miembro</Text>
-                        </View>
-                    </View>
-
-                    {/* Row 4 */}
-                    <View style={styles.tableRow}>
-                        <Text style={styles.tableColHeader}>Ing. Fredy Huaman Gonzales</Text>
-                        <View style={styles.tableCol}>
-                            <Text>Accesitario</Text>
-                        </View>
-                    </View>
-
-                    {/* Row 5 */}
-                    <View style={styles.tableRow}>
-                        <Text style={styles.tableColHeader}>Dr. Edwar Ilasaca Cahuata</Text>
-                        <View style={styles.tableCol}>
-                            <Text>Asesor</Text>
-                        </View>
-                    </View>
+                {/* Referencias */}
+                <View style={styles.section}>
+                    <Text>Ref.:</Text>
+                    <Text>• SOLICITUD de fecha <Text style={styles.bold}>25 de enero del 2024</Text></Text>
+                    <Text>• RESOLUCIÓN DECANAL N° <Text style={styles.bold}>013-2023-DFI-UNAMBA</Text></Text>
+                    <Text>• RESOLUCIÓN DECANAL N° <Text style={styles.bold}>227-2022-DFI-UNAMBA</Text></Text>
+                    <Text style={styles.bold}>REG. N° 016</Text>
                 </View>
-                <View style={[styles.section, styles.sectionFinal]}>
+
+                {/* Cuerpo del texto */}
+                <View style={styles.section}>
+                    <Text style={styles.text}>
+                        Por el presente comunico a ustedes que, en cumplimiento del Art 30 del Reglamento de Investigación vigente, se remite los documentos y las Resoluciones de la referencia y un ejemplar de la tesis titulada:
+                    </Text>
+                    <Text style={styles.bold}>
+                        "Diseño de malla de perforación y voladura para evaluar su incidencia en la fragmentación y costos operativos, en la profundización de la rampa 440, Cía. Minera Aurífera Cuatro de Enero S.A. (MACDESA) – Arequipa, 2022".
+                    </Text>
+                    <Text style={styles.text}>
+                        En ese sentido, remito dicho expediente para su
+                    </Text>
+                    <Text style={styles.bold}>PRIMERA</Text>
                     <Text>
-                        Siendo las 12:30 horas del mismo día se culmina la reunión, firmando este documento los participantes en señal de conformidad, el mismo que será adjuntado al libro de actas de la Unidad de Investigación de la Facultad de Ingeniería en
-                        <Text style={styles.bold}>
-                            folio N° 056-2024.
-                        </Text>
+                        revisión conforme indica el
                     </Text>
+                    <Text style={styles.bold}>Art 31 del Reglamento de Investigación. </Text>
+                    <Text style={styles.underline}>“Una vez recibido los trabajos de investigación o tesis, por los jurados evaluadores, se procederá a evaluar en forma y fondo en un plazo máximo de 15 días hábiles. Los miembros del jurado están obligados a participar en las diferentes etapas de la revisión del informe”; su incumplimiento constituye falta sujeta a sanción prevista en el estatuto de la UNAMBA y normas conexas.</Text>
+                    <Text>Sin otro en particular, aprovecho la oportunidad para expresarle las muestras de mi especial consideración y deferencia personal.</Text>
                 </View>
+
             </PdfBase>
         </PDFViewer>
     );

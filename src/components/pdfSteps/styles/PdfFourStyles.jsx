@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
         fontSize: 12,
         marginVertical: 32,
         marginTop: 2,
-        fontWeight: 'bold'
     },
     p: {
         fontSize: 12,
@@ -43,11 +42,11 @@ const styles = StyleSheet.create({
     },
     sectionFinal:
     {
-        marginBottom:109,
+        marginBottom: 109,
     },
     bold: {
-        fontWeight: 'bold',
-    },  
+        fontFamily: 'Times-Bold',
+    },
     // End Section Styles
 
 })

@@ -91,7 +91,7 @@ const PdfThree = () => {
                     <View style={styles.tableRow}>
                         <Text style={styles.tableColHeader}>Ing. Milson Moran Moreano</Text>
                         <View style={styles.tableCol}>
-                            <Text>Primer Miembro</Text>
+                            <Text style={styles.bold}>Primer Miembro</Text>
                         </View>
                     </View>
 
@@ -99,7 +99,7 @@ const PdfThree = () => {
                     <View style={styles.tableRow}>
                         <Text style={styles.tableColHeader}>Mgt. Rómulo Gómez Noblega</Text>
                         <View style={styles.tableCol}>
-                            <Text>Segundo Miembro</Text>
+                            <Text style={styles.bold}>Segundo Miembro</Text>
                         </View>
                     </View>
 
@@ -107,7 +107,7 @@ const PdfThree = () => {
                     <View style={styles.tableRow}>
                         <Text style={styles.tableColHeader}>Ing. Fredy Huaman Gonzales</Text>
                         <View style={styles.tableCol}>
-                            <Text>Accesitario</Text>
+                            <Text style={styles.bold}>Accesitario</Text>
                         </View>
                     </View>
 
@@ -115,7 +115,7 @@ const PdfThree = () => {
                     <View style={styles.tableRow}>
                         <Text style={styles.tableColHeader}>Dr. Edwar Ilasaca Cahuata</Text>
                         <View style={styles.tableCol}>
-                            <Text>Asesor</Text>
+                            <Text style={styles.bold}>Asesor</Text>
                         </View>
                     </View>
                 </View>
@@ -123,7 +123,7 @@ const PdfThree = () => {
                     <Text>
                         Siendo las 12:30 horas del mismo día se culmina la reunión, firmando este documento los participantes en señal de conformidad, el mismo que será adjuntado al libro de actas de la Unidad de Investigación de la Facultad de Ingeniería en
                         <Text style={styles.bold}>
-                            folio N° 056-2024.
+                             folio N° 056-2024.
                         </Text>
                     </Text>
                 </View>

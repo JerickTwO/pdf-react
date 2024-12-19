@@ -36,18 +36,17 @@ const styles = StyleSheet.create({
     },
     // End Table Styles
     // Section Styles
-
     section: {
         fontSize: 12,
         textAlign: 'justify',
     },
     sectionFinal:
     {
-        marginBottom:109,
+        marginBottom: 109,
     },
     bold: {
-        fontWeight: 'bold',
-    },  
+        fontFamily: 'Times-Bold',
+    },
     // End Section Styles
 
 })

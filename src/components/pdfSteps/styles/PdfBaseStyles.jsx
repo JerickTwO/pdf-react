@@ -1,13 +1,9 @@
-import { StyleSheet, Font } from '@react-pdf/renderer';
+import { StyleSheet } from '@react-pdf/renderer';
 
 // REGISTRO DE FUENTES
-Font.register({ family: 'Roboto', src: './fonts/times new rioman', fontStyle: 'normal', fontWeight: 'bold' });
-
 const styles = StyleSheet.create({
     page: {
         fontSize: 10,
-        fontFamily: 'Roboto',
-        fontWeight: 'bold'
     },
     container: {
         margin: '0 auto',
@@ -21,6 +17,7 @@ const styles = StyleSheet.create({
     },
 
     headerSection: {
+
         marginBottom: 10,
     },
 
