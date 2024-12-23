@@ -33,8 +33,7 @@ const styles = StyleSheet.create({
     tableColHeader: {
         width: '14%',
         padding: 5,
-
-        fontWeight: 'bold',
+        fontFamily: 'Times-Bold',
     },
 
     tableCol: {
@@ -50,7 +49,7 @@ const styles = StyleSheet.create({
         textAlign: 'justify',
     },
     bold: {
-        fontWeight: 'bold',
+        fontFamily: 'Times-Bold',
     },
     underline: {
         textDecoration: 'underline',

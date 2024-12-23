@@ -8,40 +8,34 @@ const styles = StyleSheet.create({
     container: {
         margin: '0 auto',
         backgroundColor: 'white',
+        fontFamily: 'Times-Roman',
         padding: '20px 40px',
         boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
     },
-
     header: {
         textAlign: 'center',
     },
-
     headerSection: {
-
+        fontSize: 10,
         marginBottom: 10,
     },
-
     banner: {
         width: '85vw',
         height: 'auto',
     },
-
     footerText: {
         fontSize: 8,
         position: 'absolute',
-        bottom: -240,
+        bottom: -100,
         paddingHorizontal: 40,
         left: 0,
         right: 0,
-        fontWeight: 'bold'
-
+        fontFamily: 'Times-Bold'
     },
-
     headerText: {
         fontSize: 7,
         fontStyle: 'italic',
     },
-
     hr: {
         marginTop: 10,
         marginBottom: 10,

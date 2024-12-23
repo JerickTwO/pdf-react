@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         marginVertical: 32,
         marginTop: 2,
-        fontWeight: 'bold'
+        fontFamily: 'Times-Bold'
     },
     p: {
         fontSize: 12,
@@ -26,8 +26,7 @@ const styles = StyleSheet.create({
     tableColHeader: {
         width: '45%',
         padding: 1,
-
-        fontWeight: 'bold',
+        fontFamily: 'Times-Bold',
     },
 
     tableCol: {
@@ -42,7 +41,7 @@ const styles = StyleSheet.create({
     },
     sectionFinal:
     {
-        marginBottom: 109,
+        marginBottom: 170,
     },
     bold: {
         fontFamily: 'Times-Bold',

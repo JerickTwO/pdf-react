@@ -16,7 +16,7 @@ const ConstancyVoucher = ({
                     </View>
                     {/* Mostrar texto conmemorativo si está habilitado */}
                     {showCommemorativeText && (
-                        <Text style={styles.footerText}>{commemorativeText}</Text>
+                        <Text style={styles.headerSection}>{commemorativeText}</Text>
                     )}
                 </View>
 
