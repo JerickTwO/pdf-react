@@ -1,11 +1,10 @@
-
 import PdfBase from './PdfBase';
 import { PDFViewer, Text, View, Image } from '@react-pdf/renderer';
 import Firm from './FirmStepThree.png';
 import styles from './styles/PdfThreeCMStyles';
 import { getFullWrittenDateTimeFromInput, getWrittenDate, getYear } from '../../utils/Dates';
 
-const PdfThree = () => {
+const PdfThreeCM = () => {
     const anio = getYear();
     const applicationDate = getFullWrittenDateTimeFromInput("2024-12-01 22:06:49");
     const actualData = getWrittenDate();
@@ -161,4 +160,4 @@ de las Heroicas de Junín y Ayacucho”
     );
 };
 
-export default PdfThree;
+export default PdfThreeCM;

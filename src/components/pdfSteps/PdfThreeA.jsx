@@ -1,10 +1,10 @@
 
 import PdfBase from './PdfBase';
 import { PDFViewer, Text, View } from '@react-pdf/renderer';
-import styles from './styles/PdfThreeStyles';
+import styles from './styles/PdfThreeAStyles';
 import { getFullWrittenDateTimeFromInput, getWrittenDate, getYear } from '../../utils/Dates';
 
-const PdfThree = () => {
+const PdfThreeA = () => {
     const anio = getYear();
     const applicationDate = getFullWrittenDateTimeFromInput("2024-12-01 22:06:49");
     const actualData = getWrittenDate();
@@ -132,4 +132,4 @@ const PdfThree = () => {
     );
 };
 
-export default PdfThree;
+export default PdfThreeA;

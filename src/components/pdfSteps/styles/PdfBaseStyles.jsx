@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     hr: {
         marginTop: 10,
         marginBottom: 10,
-        borderBottom: '1px solid #000',
+        borderBottom: '2.5pt solid #000',
     },
     footerInfo: {
         textAlign: 'right',

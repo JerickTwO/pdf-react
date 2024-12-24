@@ -1,8 +1,8 @@
-import PdfThreeCM from './components/pdfSteps/PdfThreeCM';
+import PdfSevenC from './components/pdfSteps/PdfSevenC';
 
 const App = () => {
     return (
-        <PdfThreeCM />
+        <PdfSevenC />
     );
 };
 
