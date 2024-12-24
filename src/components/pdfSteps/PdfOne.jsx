@@ -56,7 +56,7 @@ const Pdfone = () => {
                 </View>
                 <Text style={styles.p}>El cual obtuvo un {reservation.projectSimilarity}% DE SIMILITUD tal como se puede evidenciar en el reporte adjunto.</Text>
 
-                <Text style={styles.p}>Se expide la presente, a solicitud del interesado, a los 14 días del mes de marzo del año dos mil veinticuatro, para los fines que estime conveniente.</Text>
+                <Text style={[styles.p,{marginBottom: '290px'} ]}>Se expide la presente, a solicitud del interesado, a los 14 días del mes de marzo del año dos mil veinticuatro, para los fines que estime conveniente.</Text>
 
             </PdfBase>
         </PDFViewer>

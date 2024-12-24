@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         margin: '0 auto',
         backgroundColor: 'white',
         fontFamily: 'Times-Roman',
-        padding: '20px 40px',
+        padding: '20px 80px',
         boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
     },
     header: {
@@ -20,14 +20,15 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     banner: {
-        width: '85vw',
+        width: '65vw',
+        margin: '0 auto',
         height: 'auto',
     },
     footerText: {
         fontSize: 8,
         position: 'absolute',
         bottom: -100,
-        paddingHorizontal: 40,
+        paddingHorizontal: 80,
         left: 0,
         right: 0,
         fontFamily: 'Times-Bold'
