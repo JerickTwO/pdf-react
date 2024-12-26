@@ -8,7 +8,7 @@ const rootElement = document.getElementById('root');
 // Creamos y renderizamos la raíz
 const root = ReactDOM.createRoot(rootElement);
 root.render(
-    <React.StrictMode>
+    <>
         <App />
-    </React.StrictMode>
+    </>
 );

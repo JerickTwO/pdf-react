@@ -27,19 +27,31 @@ const styles = StyleSheet.create({
         height: '2cm',
         marginBottom: 15,
     },
+    headerSection: {
+        fontSize: 8,
+        textAlign: 'center',
+    },
     title: {
         fontSize: 18,
-        borderTop: '1px dashed #000',
         paddingHorizontal: 40,
         textDecoration: 'underline',
-        paddingTop: 25,
         textAlign: 'center',
+        marginTop:19,
+    },
+    underline: {
+        borderTop: '1px dashed #000',
+        paddingHorizontal:180,
+        paddingBottom: 15,
+    },
+    textMain:{
+        fontSize:14,
+        marginTop:10,
     },
     body: {
         textAlign: 'justify',
         fontSize: 16,
         marginBottom: 20,
-        lineHeight: 1.5,
+        lineHeight: 1.1,
     },
     footerBody: {
         fontSize: 16,
